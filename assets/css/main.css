@@ -75,6 +75,24 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.lg-view {
+  display: inline-block;
+}
+
+.sm-view {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .lg-view {
+    display: none;
+  }
+
+  .sm-view {
+    display: inline-block;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -121,6 +139,23 @@ h6 {
   background: rgba(var(--accent-color-rgb), 0.85);
 }
 
+.register,
+.register:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 18px;
+  padding: 8px 50px;
+  margin: 0 0 0 110px;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.register:hover,
+.register:focus:hover {
+  color: var(--contrast-color);
+  background: rgba(var(--accent-color-rgb), 0.85);
+}
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -129,6 +164,12 @@ h6 {
   .header .btn-getstarted {
     order: 2;
     margin: 0 15px 0 0;
+    padding: 6px 15px;
+  }
+
+  .register {
+    order: 2;
+    margin: 0 15px 0 100px;
     padding: 6px 15px;
   }
 
@@ -522,7 +563,7 @@ h6 {
 
 .footer .footer-newsletter .error-message {
   display: none;
-  background: #df1529;
+  background: #059652;
   color: #ffffff;
   text-align: left;
   padding: 15px;
@@ -1424,7 +1465,7 @@ section,
   }
 
   .tabs .nav-link.active {
-    color: var(--accent-color);
+    color: white;
     background: var(--accent-color);
   }
 }
